@@ -1,0 +1,43 @@
+{
+    "name": "rareloop/wp-router",
+    "description": "Router",
+    "keywords": [
+        "rareloop",
+        "router"
+    ],
+    "homepage": "https://github.com/rareloop/wp-router",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joe Lambert",
+            "email": "joe@rareloop.com",
+            "homepage": "https://rareloop.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "rareloop/router": "dev-master"
+    },
+    "require-dev": {
+        "brain/monkey": "2.*",
+        "phpunit/phpunit": "~5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rareloop\\WordPress\\Router\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rareloop\\WordPress\\Router\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "type": "wordpress-plugin"
+}
