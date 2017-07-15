@@ -1,9 +1,11 @@
 # Rare WordPress Router
 ![CI](https://travis-ci.org/Rareloop/wp-router.svg?branch=master)
 
-A WordPress wrapper around the [Rareloop PHP Router](https://github.com/rareloop/router).
+A WordPress wrapper around the [Rareloop PHP Router](https://github.com/rareloop/router). Easily handle custom endpoints on your WordPress site with this plugin.
 
 ## Installation
+
+Although not a requirement, using Composer and a setup like [Bedrock](https://roots.io/bedrock/) is the recommended installation method.
 
 ```
 composer require rareloop/wp-router
