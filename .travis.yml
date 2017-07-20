@@ -1,17 +1,19 @@
 language: php
-
 php:
-  - 7.0
-  - 7.1
-
+- 7.0
+- 7.1
 env:
   matrix:
-    - COMPOSER_FLAGS="--prefer-lowest"
-    - COMPOSER_FLAGS=""
-
+  - COMPOSER_FLAGS="--prefer-lowest"
+  - COMPOSER_FLAGS=""
 before_script:
-  - travis_retry composer self-update
-  - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-source
-
+- travis_retry composer self-update
+- travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-source
 script:
-  - vendor/bin/phpunit
+- vendor/bin/phpunit --coverage-clover ./tests/logs/clover.xml
+after_script:
+- php vendor/bin/coveralls -v
+notifications:
+  slack:
+    rooms:
+      secure: drjYT6nS/ElMfprd0N3Ap6bJn3ops13UbVafJ/WrhAmgGciDMNiJK8Pr12ddAOUyG7cfQsdDl4wLMR0bN36AzhuTD6OsFuu+eaEe1rvN/Cu8rT5W2Q63IaXEMBR7BLMKh1Hb7bpmmZu8fPFItFoxxDpEMJ1iGpcN0CIN/g/YapksIhPHTFmHOTM9L5VG3VJ8Mcev7dCIEVMKPzdoZ/zgFJvHf8sIAB+vPjPIk8U02mIROHNWJAOLhGrIG13yYMO4Nrkh2zSNltEBjEs6hpidqgc1L2St1gwT9uvqeNyYj7NOvXl3d9y6gEhtQNri2IEkdeEtEoRFup9fzOGJVpdScKvgUMqIiUFjLSxmX9mlB36xKavpB7kp85EUa/rngo9xm1fsZf80je4xeGF41yvGN2rAzdajmxdmXR5/49T4k1P67KCsWXX/99mYVcMck8b4bquIJ17RwKCSse9OjSiOts4vhm5ePkO1J+0cIFn9wELYd7xCguaMqZ3wOXuJ+fRE/M4HZaFnZb+d0TMF1YuLBHFx4QHJDbvwMt+PubFOdQlc4onSOYlwWhmDJHV5Zb5vuXEc0hkvP2qT1JeMEYtVIxa8zCWz9PqU3UL7JaOsTInHxCOPHBbUGTmD4GhuNodee80LiQqHkUNCu7JAky66FFx/8PvUhnJaJ2TuyLOoZ80=
