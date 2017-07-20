@@ -65,6 +65,7 @@ class Router
      * Shutdown PHP
      *
      * @return void
+     * @codeCoverageIgnore
      */
     protected static function shutdown()
     {
