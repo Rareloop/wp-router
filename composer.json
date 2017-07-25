@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": "^7.0",
-        "rareloop/router": "dev-master"
+        "rareloop/router": "^1.0.0"
     },
     "require-dev": {
         "brain/monkey": "^2.0.2",
