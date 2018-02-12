@@ -17,7 +17,8 @@
     ],
     "require": {
         "php": "^7.0",
-        "rareloop/router": "^1.0.0"
+        "rareloop/router": "^1.0.0",
+        "symfony/http-foundation": "^4.0.0"
     },
     "require-dev": {
         "brain/monkey": "^2.0.2",
