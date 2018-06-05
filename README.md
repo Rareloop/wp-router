@@ -1,3 +1,5 @@
+**This package is no longer supported. Use at your own risk. We recommend using the underlying router: https://github.com/Rareloop/router**
+
 # Rare WordPress Router
 ![CI](https://travis-ci.org/Rareloop/wp-router.svg?branch=master)
 
